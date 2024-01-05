@@ -1,0 +1,14 @@
+{
+  "name": "cf-worker-template",
+  "version": "1.0.0",
+  "description": "pgEdge Cloudflare Worker template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pgEdge",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.11.3"
+  }
+}
