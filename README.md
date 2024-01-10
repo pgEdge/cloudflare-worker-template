@@ -28,11 +28,3 @@ wrangler secret put DB
 Additionally, you should make a `.dev.vars` file and set the `DB` environment variable there as well
 so that you can run the worker locally.
 
-## Cloudflare Token
-
-You will need to set two repository secrets in your repo in order to deploy to Cloudflare. 
-The first is `CF_ACCOUNT_ID` which is your Cloudflare account ID. The second is `CF_API_TOKEN` 
-which is a token that you can generate from the [API Tokens](https://dash.cloudflare.com/profile/api-tokens) 
-section of the Cloudflare dashboard. 
-
-
