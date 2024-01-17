@@ -22,20 +22,23 @@ If you prefer to follow READMEs instead of clicking around, here are the steps t
 ### Setup your local environment
 
 Once you've deployed your worker and cloned your repository, you'll need to setup your local environment to 
-be able to run the worker locally. You'll need to install wrangler, the Cloudflare CLI tool.
+be able to run the worker locally. You'll need to install [wrangler](https://developers.cloudflare.com/workers/wrangler/), the Cloudflare CLI tool.
 
+The simplest way to install `wrangler` is to use `npm` to install dependencies:
 ```bash
-npm install -g @cloudflare/wrangler
+npm install
 ```
+
+Note that `wrangler` requires a Node version of `16.17.0` or later.
 
 ### DB connection
 
 The database connection is configured using the `DB` environment variable. The value should be in
 connection string format, e.g. `postgres://user:pass@host/dbname?sslmode=required`. This value
-can be added to Cloudflare using `wrangler` like so:
+can be added to Cloudflare using one of the `npm` scripts like so:
 
 ```bash
-wrangler secret put DB
+npm run add-db-secret
 ```
 
 The value to enter is the connection string from the pgEdge console. This can be found on the Integrations
@@ -44,7 +47,7 @@ tab of your database under the Cloudflare Workers integration, or on the databas
 
 ### Add your local secret
 
-Additionally, you should make a `.dev.vars` file and set the `DB` environment variable there as well
+Additionally, you should create a `.dev.vars` file and set the `DB` environment variable there as well
 so that you can run the worker locally.
 
 ```bash
@@ -53,10 +56,10 @@ DB=postgres://user:pass@host/dbname?sslmode=required
 
 ### Run your worker locally
 
-You can run your worker locally using `wrangler`:
+You can run your worker locally using an `npm` script:
 
 ```bash
-wrangler dev
+npm run dev
 ```
 
 Or you can use the Cloudflare dashboard to navigate to your worker and
