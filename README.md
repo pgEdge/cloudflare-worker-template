@@ -1,5 +1,5 @@
 # cloudflare-worker-template
-Bootstrap your Cloudflare Worker to connect to a pgEdge database.
+Bootstrap your Cloudflare Worker to connect to a pgEdge Cloud database.
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/pgEdge/cloudflare-worker-template)
 
